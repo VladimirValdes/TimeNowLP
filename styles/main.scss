@@ -1,0 +1,84 @@
+
+@use 'abstracts/palette' as p;
+@use 'abstracts/mixins' as m;
+
+
+@use 'responsive/main-responsive' as r;
+
+
+
+html {
+    
+    font-family: p.$font-primary;
+    font-size: 62.5%;
+    
+}
+
+body {
+    @include m.pancke-stack();
+    background-color: #fff;
+}
+
+.header {
+   @include m.split-screen( 'main', 'img', center);
+
+   .hero-content {
+       grid-area: main;
+       padding: 1.5rem;
+       border: 1px solid red;
+
+       &__title {
+           @include m.base-text(3.5rem, p.$w-xbg, p.$c-terteary );
+    
+       }
+
+       &__desc {
+           @include m.base-text(1.5rem, p.$w-sm, p.$c-primary);
+
+       }
+
+       .btns {
+           display: flex;
+           flex-direction: row;
+           justify-content: flex-start;
+           align-items: center;
+
+           &__main {
+               @include m.base-button(p.$c-btn, p.$c-btnF, p.$w-bg, 190px);
+           }
+
+           &__secondary{
+               @include m.base-button(transparent, p.$c-primary, p.$w-bg, 130px);
+           }
+       }
+
+       .footer {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+
+            &__text {
+                @include m.base-text(1.5rem, p.$w-sm, p.$c-primary);
+
+                &--link {
+                    font-weight: p.$w-bg;
+                    text-decoration: underline;
+                }
+            }
+       }
+   }
+
+   .hero-img {
+       grid-area: img;
+       background-color: #46ccde;
+       border: 1px solid blue;
+
+   }
+}
+
+
+
+@include r.menu( 43em );
+@include r.tablet( 43em );
+@include r.desktop( 62em );

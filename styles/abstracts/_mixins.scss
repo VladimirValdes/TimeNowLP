@@ -1,0 +1,202 @@
+
+/*========================
+        LAYOUTS
+========================*/
+
+@mixin  pancke-stack {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    margin: 0 auto;
+}
+
+
+@mixin  split-screen($area1, $area2, $j-items) {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        $area1
+        $area2;
+    justify-items: $j-items;
+}
+
+
+@mixin  split-screen-desk($area1, $area2, $j-items) {
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "#{$area1 $area1  $area2  $area2}";
+    justify-items: $j-items;
+}
+
+
+
+
+/*========================
+        COMPONENTS
+========================*/
+
+
+
+// ======MENU🍔====
+
+@mixin base-menu (){
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-left: 0;
+    padding-top: 10rem;
+    background: linear-gradient(344deg, rgba(253,252,249,1) 21%, rgba(237,206,244,1) 100%);
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+
+@mixin hamburger-icon($width, $height, $bg) {
+    
+    @content;
+    
+    position: relative;
+
+    width: $width;
+    height: $height;
+    
+    border-radius: $height / 2;
+
+    background-color: $bg;
+
+    &:before, &:after {
+        
+        content: '';
+
+        position: absolute;
+        top: -.9em;
+
+        display: block; 
+        width: $width;
+        height: $height;
+
+        background-color: $bg;
+        border-radius: $height / 2;
+        
+        transition: transform .2s;
+
+    }
+
+    &:after {
+        top: .9em;
+    }
+
+}
+
+@mixin close-icon(){
+    
+    @content;
+   
+    height: 0;  
+
+    &:before, &:after {
+
+        top: 0; 
+        transform: rotate(-45deg);
+
+    }
+
+    &:after {
+        transform: rotate(45deg);
+    }
+}
+
+
+
+//======FORMS====//
+
+@mixin  button-hambuger() {
+
+    position: absolute;
+    right: 1rem;
+    z-index: 10;
+   
+   
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       width: 65px;
+       padding: 16px;
+       background-color: transparent;
+       border: none;
+   
+       cursor: pointer
+   }
+
+@mixin  base-button($bk, $color, $w, $m-w) {
+
+    @content;
+
+    width: 100%;
+    min-width: 125px;
+    max-width: $m-w;
+    padding: 16px 8px;
+    font-size: 1.5rem;
+    font-weight: $w;
+    color: $color;
+    background-color: $bk;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    text-align: center;
+
+    cursor: pointer;
+
+    // &:hover {
+    //     color: $c-btn;
+    //     background-color: transparent;
+    //     border: 1px solid $c-btn;
+
+    //     span {
+    //         color: $c-btn;
+    //     }
+    // }
+}
+
+@mixin  base-input() {
+    @content;
+
+    padding: 1.5rem;
+    border: 1px solid #E2E8F0;
+    outline: none;
+    border-radius: 5px;
+    box-shadow: -36px 2px 79px -18px rgba(0,0,0,0.1);
+
+    &:placeholder-shown {
+        font-weight: $w-sm;
+        font-size: 1.5rem;
+        color: #5D5D5E;
+    }
+}
+
+
+
+//======TEXT====//
+
+@mixin  base-text($fs, $fw, $c, $t-lgn: start, $lh: normal) {
+    font-size: $fs;
+    text-align: $t-lgn;
+    font-weight: $fw;
+    line-height: $lh;
+    color: $c;
+}
+
+
+@mixin base-layoutW() {
+    width: 100%;
+    max-width: 1124px;
+    margin: 0 auto;
+            
+}

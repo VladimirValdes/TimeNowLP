@@ -1,0 +1,104 @@
+/*========================
+        LAYOUTS
+========================*/
+/*========================
+        COMPONENTS
+========================*/
+html {
+  font-family: "Inter", sans-serif;
+  font-size: 62.5%;
+}
+
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.header {
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-areas: "main" "img";
+  justify-items: center;
+}
+.header .hero-content {
+  grid-area: main;
+  padding: 1.5rem;
+  border: 1px solid red;
+}
+.header .hero-content__title {
+  font-size: 3.5rem;
+  text-align: start;
+  font-weight: 600;
+  line-height: normal;
+  color: #1d1b67;
+}
+.header .hero-content__desc {
+  font-size: 1.5rem;
+  text-align: start;
+  font-weight: 400;
+  line-height: normal;
+  color: #536374;
+}
+.header .hero-content .btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.header .hero-content .btns__main {
+  width: 100%;
+  min-width: 125px;
+  max-width: 190px;
+  padding: 16px 8px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #1d1b67;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  text-align: center;
+  cursor: pointer;
+}
+.header .hero-content .btns__secondary {
+  width: 100%;
+  min-width: 125px;
+  max-width: 130px;
+  padding: 16px 8px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #536374;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  text-align: center;
+  cursor: pointer;
+}
+.header .hero-content .footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.header .hero-content .footer__text {
+  font-size: 1.5rem;
+  text-align: start;
+  font-weight: 400;
+  line-height: normal;
+  color: #536374;
+}
+.header .hero-content .footer__text--link {
+  font-weight: 700;
+  text-decoration: underline;
+}
+.header .hero-img {
+  grid-area: img;
+  background-color: #46ccde;
+  border: 1px solid blue;
+}
+
+/*# sourceMappingURL=main.css.map */

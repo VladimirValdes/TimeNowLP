@@ -1,0 +1,50 @@
+
+
+@mixin  utilityClasess() {
+    
+    
+    .title {
+        @include base-text(5.5rem, $w-bg, $c-primary );
+        margin-bottom: 0;
+
+        &-sub {
+            font-size: 3.5rem;
+        }
+
+        &-ft {
+            font-size: 2.5rem;
+        }
+    }
+
+    .info {
+
+        @include base-text(1.7rem, $w-sm, $c-secondary, start , 2.5rem );
+
+
+        &--color {
+            margin: 0;
+            margin-left: 1rem;
+            color: black;
+            
+        }
+
+        span {
+
+            @include base-text(1.7rem, $w-bg, $c-links );
+
+        }
+
+      
+    }
+
+
+    .link {
+
+        @include base-text(1.7rem, $w-bg, $c-btn );
+
+    }
+}
+
+
+
+
