@@ -26,21 +26,21 @@ body {
 .header .hero-content {
   grid-area: main;
   padding: 1.5rem;
-  border: 1px solid red;
 }
 .header .hero-content__title {
   font-size: 3.5rem;
   text-align: start;
-  font-weight: 600;
+  font-weight: 700;
   line-height: normal;
   color: #1d1b67;
+  margin-bottom: 0;
 }
 .header .hero-content__desc {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   text-align: start;
   font-weight: 400;
-  line-height: normal;
-  color: #536374;
+  line-height: 2.5rem;
+  color: #425466;
 }
 .header .hero-content .btns {
   display: flex;
@@ -52,8 +52,8 @@ body {
   width: 100%;
   min-width: 125px;
   max-width: 190px;
-  padding: 16px 8px;
-  font-size: 1.5rem;
+  padding: 18px 8px;
+  font-size: 1.7rem;
   font-weight: 700;
   color: #ffffff;
   background-color: #1d1b67;
@@ -67,10 +67,10 @@ body {
   width: 100%;
   min-width: 125px;
   max-width: 130px;
-  padding: 16px 8px;
-  font-size: 1.5rem;
+  padding: 18px 8px;
+  font-size: 1.7rem;
   font-weight: 700;
-  color: #536374;
+  color: #425466;
   background-color: transparent;
   border: 1px solid transparent;
   border-radius: 5px;
@@ -85,20 +85,34 @@ body {
   align-items: center;
 }
 .header .hero-content .footer__text {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   text-align: start;
   font-weight: 400;
   line-height: normal;
-  color: #536374;
+  color: #425466;
+  margin-bottom: 0;
 }
 .header .hero-content .footer__text--link {
   font-weight: 700;
   text-decoration: underline;
 }
+.header .hero-content .footer__icon {
+  margin-right: 1rem;
+}
 .header .hero-img {
   grid-area: img;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5rem 1.5rem;
   background-color: #46ccde;
-  border: 1px solid blue;
+}
+.header .hero-img__img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
 }
 
 /*# sourceMappingURL=main.css.map */
